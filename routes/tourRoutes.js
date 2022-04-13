@@ -12,6 +12,8 @@ const router = express.Router();
 router.route('/top-5-cheap').get(tourCont.aliasTopTours, tourCont.getAllTours);
 
 router.route('/tour-stats').get(tourCont.getTourStats);
+
+router.route('/monthly-plan/:year').get(tourCont.getMonthlyPlan);
 //Tours Method
 router.route('/').get(tourCont.getAllTours).post(tourCont.addNewTour);
 

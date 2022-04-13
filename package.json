@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "debug": "ndb server.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +13,9 @@
     "express": "^4.17.3",
     "global": "^4.4.0",
     "mongoose": "^5.13.14",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "slugify": "^1.6.5",
+    "validator": "^13.7.0"
   },
   "description": ""
 }

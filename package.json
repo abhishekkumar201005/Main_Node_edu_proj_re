@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start:dev": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js"
   },
   "author": "",
@@ -11,8 +12,8 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "global": "^4.4.0",
     "mongoose": "^5.13.14",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
     "slugify": "^1.6.5",
     "validator": "^13.7.0"

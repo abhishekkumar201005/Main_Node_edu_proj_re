@@ -2,7 +2,7 @@ const express = require('express');
 
 //controller for api...creation
 const tourCont = require('../controllers/tourController');
-
+const authCont = require('../controllers/authController');
 //middleware
 const router = express.Router();
 // param middleware
@@ -15,7 +15,10 @@ router.route('/tour-stats').get(tourCont.getTourStats);
 
 router.route('/monthly-plan/:year').get(tourCont.getMonthlyPlan);
 //Tours Method
-router.route('/').get(tourCont.getAllTours).post(tourCont.addNewTour);
+router
+  .route('/')
+  .get(authCont.protect, tourCont.getAllTours)
+  .post(tourCont.addNewTour);
 
 router
   .route('/:id')
